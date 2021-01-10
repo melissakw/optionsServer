@@ -38,10 +38,6 @@ router.get("/", async (req, res, next) => {
   } catch (e) {
     res.status(404).send('<h1> Page not found </h1>');
   }
-  var ctx = req.query;
-  ctx.endpoint = tdEndpoint;
-  res.send(ctx);
-
 });
 
 module.exports = router;
