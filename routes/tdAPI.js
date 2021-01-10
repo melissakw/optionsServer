@@ -33,10 +33,10 @@ router.get("/", async (req, res, next) => {
         expMonth: 'ALL',
       }
     });
-    let json = response.data
+    let json = response.data;
     res.send(json);
   } catch (e) {
-    console.log(e);
+    res.status(404).send('<h1> Page not found </h1>');
   }
   var ctx = req.query;
   ctx.endpoint = tdEndpoint;
